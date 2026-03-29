@@ -63,6 +63,14 @@ python baseline_traffic.py --cycles 50
 python baseline_traffic.py
 ```
 
+### Flags
+
+| Flag | Description |
+|---|---|
+| `--minutes N` | Stop automatically after N minutes. Ideal for cron jobs — e.g. `--minutes 45` in an hourly cron leaves 15 min rest between runs. |
+| `--cycles N` | Stop after N full activity cycles. Each cycle is ~10–20 requests and takes roughly 30–60 seconds depending on server response times. |
+| *(no flags)* | Runs indefinitely until you press Ctrl+C. |
+
 ### What baseline traffic covers
 
 Both users alternate realistic activity across every crAPI API surface:
